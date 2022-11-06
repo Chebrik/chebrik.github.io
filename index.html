@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title>Loading Screen</title>
+        <style>
+            .background {
+                background-repeat:no-repeat;
+                background-attachment:fixed;
+                background-position:center;
+                background-size: cover;
+            }
+
+        </style>
+
+    </head>
+
+    <body class="background"></body>
+
+    <script language="javascript">
+
+        var images = [
+            "https://i.imgur.com/5IJHwG1.png",
+            "https://i.imgur.com/dk3DWuP.jpg",
+            "https://i.imgur.com/2cOwIxG.jpg",
+            "https://i.imgur.com/m2w7B3T.jpg"                                    
+        ];
+
+        document.body.style.backgroundImage = "url('" + images[ Math.floor( Math.random() * images.length ) ] + "')";
+
+    </script>
+    <script type="text/javascript">
+        
+      (function() {
+      var volume = 1;
+        $("audio").each(function(){ this.volume = volume/1; });
+      });
+    
+    </script>
+            <audio autoplay controls loop hidden>
+                <source src="https://cdn.discordapp.com/attachments/769508129900593174/1038896949597847572/load.ogg" type="audio/ogg">
+            </audio>
+
+</html>
